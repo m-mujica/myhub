@@ -17,7 +17,7 @@ var updatePage = function() {
     $("#main").html("Welcome home");
   } else {
     /* globals steal */
-    steal.import(`myhub/${hash}/${hash}`).then(function(moduleOrPlugin) {
+    steal.import(`myhub@1.0.0#${hash}/${hash}`).then(function(moduleOrPlugin) {
       var plugin = typeof moduleOrPlugin === "function"
         ? moduleOrPlugin
         : moduleOrPlugin["default"];
